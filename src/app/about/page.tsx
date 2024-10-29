@@ -1,10 +1,8 @@
-import Navbar from "@/components/Navbar"
-import "../app/globals.css";
+import "../globals.css";
 
 const about = () => {
   return (
     <div>
-        <Navbar />
         About
       </div>
   )
