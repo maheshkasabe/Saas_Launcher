@@ -16,8 +16,8 @@ export async function POST(req: Request){
                 }
             ],
             mode: "subscription",
-            success_url: `https://localhost:3000/success?planName=${encodeURIComponent(planName)}`,
-            cancel_url: `https://${process.env.VERCEL_URL}/cancel`,
+            success_url: `https://${process.env.NEXT_PUBLIC_APP_URL}/success?planName=${encodeURIComponent(planName)}`,
+            cancel_url: `https://${process.env.NEXT_PUBLIC_APP_URL}/cancel`,
         });
         return NextResponse.json({ sessionId: session.id });
 
