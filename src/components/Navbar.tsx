@@ -13,7 +13,7 @@ const Navbar = () => {
         <div className='flex flex-row justify-between  items-center font-sans'>
             <ul className='flex flex-row justify-center'>
                 <li className='px-10 text-[#5D3FD3] hover:font-bold cursor-pointer'> <Link href={"/"}> Home </Link></li>
-                <li className='px-10 hover:font-bold cursor-pointer'><Link href="/about"> About </Link></li>
+                <li className='px-10 hover:font-bold cursor-pointer'><Link href="/docs"> Docs </Link></li>
                 <li className='px-10 hover:font-bold cursor-pointer'><Link href="/pricing"> Pricing </Link></li>
             </ul>
         </div>

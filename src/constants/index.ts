@@ -7,6 +7,27 @@ export const NAV_LINKS = [
     { href: '/', key: 'contact_us', label: 'Contact Us' },
   ];
 
+  export const Reviews = [
+    {
+      name: 'Max Khamrovsyki',
+      position: 'Senior Eng @ Red Hat', 
+      comment: 'Nearly done with a MVP in 3 days of part-time work... and deployed on Fly.io in 10 minutes.',
+      avatar: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+    },
+    {
+      name: 'Tim Skaggs',
+      position: 'Founder @ Atles US',      
+      comment: 'In just 6 nights... my SaaS app is live 🎉! Huge thanks to the amazing @wasplang community 🙌 for their guidance along the way. These tools are incredibly efficient 🤯!',
+      avatar: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+    },
+    {
+      name: 'Bob Smith',
+      position: 'Entreprenuer',
+      comment: 'I used Wasp to build and sell my AI-augmented SaaS app for marketplace vendors within two months!',
+      avatar: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+    },
+  ];
+
   interface Plan {
     name: string;
     priceid: string;
