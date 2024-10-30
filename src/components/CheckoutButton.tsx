@@ -15,7 +15,7 @@ const CheckoutButton: React.FC<CheckoutButtonProps> = ({ planAmount, planName })
   const handleCheckout = async () => {
     setLoading(true);
 
-    const response =  await fetch("https://saas-launcher.vercel.app/api/auth/create-checkout-session", {
+    const response =  await fetch(`https://${process.env.NEXT_PUBLIC_APP_URL}/api/auth/create-checkout-session`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

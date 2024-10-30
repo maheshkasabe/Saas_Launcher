@@ -1,15 +1,13 @@
-"use client";
 
-import { useSession } from "next-auth/react";
+import SuccessContent from "./SuccessContent"
 
-const page = () => {
-  const { data: Session } = useSession();
-  
-  return (
-    <div>
-        <p> Dear {Session?.user?.name}, You have successfully subscribed to a plan</p>
-    </div>
-  )
+interface SuccessPageProps {
+  searchParams: { planName?: string };
 }
 
-export default page
+export default function SuccessPage({ searchParams }: SuccessPageProps) {
+  const planName = searchParams.planName ? decodeURIComponent(searchParams.planName) : "Your Subscription";
+  
+  return <SuccessContent planName={planName} />;
+}
+
