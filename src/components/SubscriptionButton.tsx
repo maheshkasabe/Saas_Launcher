@@ -15,7 +15,7 @@ const SubscriptionButton: React.FC<SubscriptionButtonProps> = ({ planId, planNam
   const handleCheckout = async () => {
     setLoading(true);
 
-    const response =  await fetch(`https://${process.env.NEXT_PUBLIC_APP_URL}/api/auth/create-checkout-session`, {
+    const response =  await fetch(`https://${process.env.NEXT_PUBLIC_APP_URL}/api/auth/create-subscription-session`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
