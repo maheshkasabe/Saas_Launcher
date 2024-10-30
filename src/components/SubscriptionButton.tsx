@@ -15,7 +15,7 @@ const SubscriptionButton: React.FC<SubscriptionButtonProps> = ({ planId, planNam
   const handleCheckout = async () => {
     setLoading(true);
 
-    const response =  await fetch("https://saas-launcher.vercel.app/api/auth/create-subscription-session", {
+    const response =  await fetch(`https://${process.env.VERCEL_URL}/api/auth/create-subscription-session`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
