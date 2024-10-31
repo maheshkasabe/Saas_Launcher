@@ -10,8 +10,8 @@ const Body = () => {
         
         <div className='flex flex-col py-40 items-center border-2 shadow-lg rounded-lg m-5 h-full w-full bg-white'>
             <img alt="heli" src="/heli.svg" width={60} height={60} />
-            <h1 className='text-center text-5xl font-bold'>Launch your SaaS by Weekend</h1>
-            <p className='text-center m-10'>The Next.js Startup Boilerplate for busy founders,
+            <h1 className='text-center text-6xl font-bold'>Launch your SaaS by Weekend</h1>
+            <p className='text-center text-lg m-10'>The Next.js Startup Boilerplate for busy founders,
             <br/>with all you need to build and launch your startup soon.</p>
 
             <button className='w-1/6 h-10 mb-10 text-white rounded-full border-2 border-[#5D3FD3] bg-[#5D3FD3] hover:bg-white hover:text-[#5D3FD3] hover:shadow-lg'> <Link href="/pricing"> Get Started </Link> </button>
