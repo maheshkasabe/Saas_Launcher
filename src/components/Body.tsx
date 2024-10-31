@@ -14,10 +14,10 @@ const Body = () => {
             <p className='text-center m-10'>The Next.js Startup Boilerplate for busy founders,
             <br/>with all you need to build and launch your startup soon.</p>
 
-            <button className='w-1/6 h-10 text-white rounded-full border-2 border-[#5D3FD3] bg-[#5D3FD3] hover:bg-white hover:text-[#5D3FD3] hover:shadow-lg'> <Link href="/pricing"> Get Started </Link> </button>
+            <button className='w-1/6 h-10 mb-10 text-white rounded-full border-2 border-[#5D3FD3] bg-[#5D3FD3] hover:bg-white hover:text-[#5D3FD3] hover:shadow-lg'> <Link href="/pricing"> Get Started </Link> </button>
             <p className="text-center p-10 text-lg"> Built & ships with <u>Next.js,</u> <u>Tailwind,</u> <u>MongoDB,</u> <u>Stripe,</u> <u>Nextra</u> and <br/> <u> Typescript.</u> </p>
 
-            <div className="flex flex-col items-center p-2 m-2 w-5/6 border-black rounded-2xl">
+            <div className="flex flex-col items-center p-20 m-10 w-5/6 border-black rounded-2xl">
             {
                   Features.map((feature) => {
                   return (
@@ -46,7 +46,7 @@ const Body = () => {
             </div>
 
 
-            <div className="flex flex-col items-center p-10 m-10 w-5/6 border-2 border-black rounded-2xl bg-black text-white">
+            <div className="flex flex-col items-center p-20 m-10 w-5/6 border-2 border-black rounded-2xl bg-black text-white">
               <div>
                 <p className="text-center font-semibold text-4xl p-2">What Our Users Say</p>
               </div>
@@ -68,7 +68,7 @@ const Body = () => {
               </div>
             </div>
 
-            <hr className="m-20 border-gray-400" style={{ width: "85%", height: "100%", color: "black" }} />
+            <hr className="m-10 border-gray-400" style={{ width: "85%", height: "100%", color: "black" }} />
             
             <div className="flex flex-row items-center">
                 
