@@ -1,3 +1,4 @@
+import { features } from "process";
 
 export const NAV_LINKS = [
     { href: '/', key: 'home', label: 'Home' },
@@ -6,6 +7,105 @@ export const NAV_LINKS = [
     { href: '/', key: 'pricing ', label: 'Pricing ' },
     { href: '/', key: 'contact_us', label: 'Contact Us' },
   ];
+
+interface Features {
+  Title: string;
+  Description: string;
+  features: string[];
+  Hours: string;
+  Avatar: string;
+}
+
+export const Features = [
+  {
+    Title: "Landing Pages",
+    Description: "Create beautiful landing pages for your SaaS startup in minutes.",
+    features: [
+      "Landing Page",
+      "Waitlist",
+      "Pre Sale"
+    ],
+    Hours: "20 Hours Saved",
+    Avatar: "../shipped_feature_0.jpg",
+  },
+  {
+    Title: "Collect Payments",
+    Description: "Collect payments from your customers in minutes.",
+    features: [
+      "Checkout Sessions",
+      "Webhooks to update subscription",
+      "Pricing Page"
+    ],
+    Hours: "4 Hours Saved",
+    Avatar: "../shipped_feature_1.jpg",
+  },
+  {
+    Title: "Sign up & Login",
+    Description: "Create a beautiful sign up and login page in minutes.",
+    features: [
+      "Sign Up & Login",
+      "Magic Link",
+      "Social Login"
+    ],
+    Hours: "10 Hours Saved",
+    Avatar: "../shipped_feature_2.jpg",
+  },
+  {
+    Title: "Email",
+    Description: "Create beautiful email templates for your SaaS startup in minutes.",
+    features: [
+      "Mailchimp",
+      "send transactional emails",
+      "ready for product updates"
+    ],
+    Hours: "6 Hours Saved",  
+    Avatar: "../shipped_feature_3.jpg",
+  },
+  {
+    Title: "DB ORM",
+    Description: "Use your favorite database with Prisma.",
+    features: [
+      "Mysql, Postgres, MongoDB",
+      "DB Schema with Prisma",
+      "Simplified Data Transactions"
+    ],
+    Hours: "10 Hours Saved",
+    Avatar: "../shipped_feature_4.jpg",
+  },
+  {
+    Title: "Design",
+    Description: "Create beautiful landing pages for your SaaS startup in minutes.",
+    features: [
+      "React Components",
+      "TailwindCSS Support",
+      "Figma Support",
+    ],
+    Hours: "18 Hours Saved",
+    Avatar: "../shipped_feature_5.jpg",
+  },
+  {
+    Title: "Blog",
+    Description: "Create beautiful landing pages for your SaaS startup in minutes.",
+    features: [
+      "Landing Page",
+      "Waitlist",
+      "Pre Sale"
+    ],
+    Hours: "6 Hours Saved",
+    Avatar: "../shipped_feature_6.jpg",
+  },
+  {
+    Title: "Dashboards",
+    Description: "Beautiful Dashboards to visualize data.",
+    features: [
+      "Bar Charts",
+      "Pie Charts",
+      "Many More"
+    ],
+    Hours: "12 Hours Saved",
+    Avatar: "../shipped_feature_7.jpg",
+  },
+]
 
   export const Reviews = [
     {
