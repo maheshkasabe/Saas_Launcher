@@ -1,10 +1,21 @@
-const mongoose = require('mongoose');
+// Assuming you’re using Mongoose for MongoDB
+import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
-  name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
-  role: { type: String, enum: ['user', 'admin'], default: 'user' },
-  image: String,
+  name: String,
+  profileImage: String,
+  subscriptionStatus: {
+    type: String,
+    enum: ['free', 'subscribed'],
+    default: 'free',
+  },
+  subscriptionPlan: {
+    type: String,
+    enum: ['Free', 'Pro', 'Plus'], // Define your plan names
+    default: 'Free',
+  },
+  subscriptionExpiry: Date, // If using time-based access
 });
 
-module.exports = mongoose.models.User || mongoose.model('User', userSchema);
+export default mongoose.models.User || mongoose.model('User', userSchema);
