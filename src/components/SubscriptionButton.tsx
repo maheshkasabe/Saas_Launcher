@@ -8,7 +8,6 @@ const stripePromise = loadStripe("pk_test_51QFCuHE9zdHlWOZmloxD4Ccz4SfnE1VQ04lkZ
 interface SubscriptionButtonProps {
     planId: string;
     planName: string;
-    email: string;
 }
 
 const SubscriptionButton: React.FC<SubscriptionButtonProps> = ({ planId, planName }) => {
