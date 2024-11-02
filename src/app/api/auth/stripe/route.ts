@@ -6,12 +6,6 @@ import User from '../../../../models/User'; // Make sure the path and case match
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
-
 export async function POST(req: NextRequest) {
   await connectMongo();
 
