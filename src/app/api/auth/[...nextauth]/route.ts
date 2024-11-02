@@ -24,14 +24,7 @@ const handler = NextAuth({
           subscriptionStatus: 'free',
           subscriptionPlan: 'Free',
         });
-        session.user.subscriptionStatus = newUser.subscriptionStatus;
-        session.user.subscriptionPlan = newUser.subscriptionPlan;
-      } else {
-        // If user exists, add subscription details to session
-        session.user.subscriptionStatus = userData.subscriptionStatus;
-        session.user.subscriptionPlan = userData.subscriptionPlan;
       }
-
       return session;
     },
   }
