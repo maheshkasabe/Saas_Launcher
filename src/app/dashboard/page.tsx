@@ -4,10 +4,15 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Content from '../../components/Content';
 
+type User = {
+  subscriptionPlan: 'Free' | 'Pro' | 'Plus';
+  // Add other properties as needed, like `email` or `name`
+};
+
 const Dashboard = () => {
   const { data: session } = useSession();
   const router = useRouter();
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -50,7 +55,7 @@ const Dashboard = () => {
         <div className='flex flex-col items-center justify-center m-10'>
           {(user) &&(
             <div> 
-              <Content plan={user?.subscriptionPlan} />
+              <Content plan={user.subscriptionPlan} />
             </div>
 
           )}
