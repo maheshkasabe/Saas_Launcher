@@ -42,7 +42,7 @@ const Dashboard = () => {
       if (!user) {
         router.push('/forbidden');
       }
-    }, 2000);
+    }, 5000);
 
     fetchUser();
   }, [session]);
