@@ -3,6 +3,7 @@ import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Content from '../../components/Content';
+import { set } from 'mongoose';
 
 type User = {
   subscriptionPlan: 'Free' | 'Pro' | 'Plus';
@@ -13,13 +14,14 @@ const Dashboard = () => {
   const { data: session } = useSession();
   const router = useRouter();
   const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     const fetchUser = async () => {
       if (!session) return;
 
       try {
-        const response = await fetch(`https://localhost:3000/api/user`, {
+        const response = await fetch(`https://${process.env.NEXT_PUBLIC_APP_URL}/api/user`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -32,20 +34,25 @@ const Dashboard = () => {
         }
         const data = await response.json();
         setUser(data.user);
+        setLoading(false);
 
       } catch (error) {
         console.error('Error fetching user data:', error);
       }
     };
 
+    fetchUser();
+
     const timeout = setTimeout(() => {
-      if (!user) {
+      if (loading) {
         router.push('/forbidden');
       }
-    }, 5000);
+    }, 3000); // 5 seconds
 
-    fetchUser();
-  }, [session]);
+    // Clear the timeout if user data is fetched
+    return () => clearTimeout(timeout);
+
+  }, [session, loading]);
 
   if (!session) return <p>Loading...</p>;
 
