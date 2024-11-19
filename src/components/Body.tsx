@@ -68,7 +68,7 @@ const Body = () => {
               </div>
             </div>
 
-            <hr className="m-10 border-gray-400" style={{ width: "85%", height: "100%", color: "black" }} />
+            <hr className="m-5 border-gray-400" style={{ width: "85%", height: "100%", color: "black" }} />
             
             <div className="flex flex-row items-center">
                 
@@ -80,7 +80,7 @@ const Body = () => {
                 </div>
             </div>
 
-            <p>Made with ❤️ by <a href="https://twitter.com/maheshstwt">@maheshstwt</a></p>
+            <p>Made with ❤️ by <a href="https://twitter.com/mhshx_">@mhshx_</a></p>
             <p>©2024 NextJS</p>
         </div>
 

@@ -3,11 +3,9 @@ import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Content from '../../components/Content';
-import { set } from 'mongoose';
 
 type User = {
   subscriptionPlan: 'Free' | 'Pro' | 'Plus';
-  // Add other properties as needed, like `email` or `name`
 };
 
 const Dashboard = () => {
@@ -47,9 +45,8 @@ const Dashboard = () => {
       if (loading) {
         router.push('/forbidden');
       }
-    }, 3000); // 5 seconds
-
-    // Clear the timeout if user data is fetched
+    }, 2000); // 2 seconds
+    
     return () => clearTimeout(timeout);
 
   }, [session, loading]);
